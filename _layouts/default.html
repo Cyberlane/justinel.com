@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    <main class="content">
+      <div class="action-bar">
+        <form class="search">
+          <input type="text" placeholder="Search posts">
+          <ul></ul>
+        </form>
+      </div>
+      <div class="card">
+        <div class="card__content">
+          {{ content }}
+        </div>
+      </div>
+      {% include footer.html %}
+    </main>
+  </body>
+</html>
