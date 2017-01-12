@@ -1,0 +1,21 @@
+title:  'Justin Nel'
+email:  justin@cyber-lane.com
+description: > # this means to ignore newlines until "baseurl:"
+  Articles on Electronics, Code and more
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://justinel.com" # the base hostname & protocol for your site
+twitter_username: cyberlane
+github_username:  cyberlane
+exclude: ['node_modules']
+paginate: 10
+paginate_path: "/page:num/"
+permalink: /:year/:month/:title
+sass:
+  compressed: true
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Gems
+gems: [jekyll-paginate]
