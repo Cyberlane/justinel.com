@@ -1,3 +1,28 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+.footer {
+  margin: 50px 0;
+  text-align: center;
+  color: #3a4250;
+  &__copyright {
+    margin: 0 0 10px;
+  }
+  &__links {
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      display: inline-block;
+      margin: 0 5px;
+      a {
+        display: block;
+        img {
+          opacity: .8;
+          width: 22px;
+        }
+      }
+    }
+  }
+}

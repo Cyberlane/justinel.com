@@ -31,3 +31,107 @@ a {
     text-decoration: underline;
   }
 }
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+.content {
+  background: #f1f4f5;
+  padding: 30px 0 65px;
+  overflow-x: hidden;
+}
+@media screen and (max-width: 850px) {
+  .content {
+    padding: 50px 40px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .content {
+    padding: 45px 15px;
+  }
+}
+
+.card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  &__content {
+    padding: 0 64px 64px 64px;
+    table {
+      width: auto;
+      margin: 0 0 50px;
+      th {
+        padding: 16px 25px;
+        text-align: left;
+        background: #3a4250;
+        color: #fff;
+      }
+      td {
+        padding: 8px 25px;
+        line-height: 24px;
+        font-size: 14px;
+      }
+    }
+  }
+  @media screen and (max-width: 850px) {
+    &__content {
+      padding: 0 40px 40px 40px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    &__content {
+      padding: 0 24px 24px 24px;
+    }
+  }
+}
+
+.action-bar {
+  max-width: 800px;
+  margin: 0 auto 25px;
+  &::after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+}
+
+.search {
+  position: relative;
+  input {
+    width: 100%;
+    padding: 8px 15px;
+    outline: 0;
+    border: 0;
+  }
+  ul {
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    max-height: 200px;
+    overflow-y: scroll;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    &:empty {
+      display: none;
+    }
+    li {
+      a {
+        display: block;
+        padding: 15px;
+        color: #3a4250;
+        transition: background 0.2s ease-in-out;
+        &:hover {
+          background: #f9f9f9;
+        }
+      }
+    }
+  }
+}

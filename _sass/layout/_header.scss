@@ -1,3 +1,96 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+.header {
+  padding: 48px 0;
+  z-index: 5;
+  color: #fff;
+  background-color: #29AD29;
+  background-image: -webkit-gradient(linear,left top,right bottom,from(#29AD29),to(#2D8829));
+  background-image: -webkit-linear-gradient(top left,#29AD29,#2D8829);
+  background-image: linear-gradient(to bottom right,#29AD29,#2D8829);
+  display: table;
+  width: 100%;
+  @media screen and (max-width: 725px) {
+    text-align: center;
+    min-width: 100%;
+    display: block;
+  }
+  p {
+    a {
+      text-decoration: none;
+      color: #fff;
+      border-bottom: 1px dotted #fff;
+    }
+  }
+  &__img {
+    display: table-cell;
+    vertical-align: top;
+    min-width: 120px;
+    @media screen and (max-width: 725px) {
+      width: 120px;
+      margin: 0 auto;
+      display:block;
+    }
+    a {
+      display: block;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 50%;
+      max-height: 120px;
+    }
+  }
+  &__bio {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 0 0 24px;
+    width: 100%;
+    height: 120px;
+    p {
+      margin: 0 0 8px 0;
+    }
+    @media screen and (max-width: 725px) {
+      display: none;
+    }
+  }
+}
+
+.nav {
+  background-color: #213E21;
+  text-align: center;
+  ul {
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 788px;
+  }
+  li {
+    float: left;
+    width: 50%;
+    @media screen and (max-width: 500px) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: block;
+    padding: 24px 30px;
+    font-size: 13px;
+    @media screen and (max-width: 500px) {
+      padding: 15px 0;
+    }
+    &:hover {
+      color: #29AD29;
+    }
+  }
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 64px;
+}

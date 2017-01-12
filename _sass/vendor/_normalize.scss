@@ -24,8 +24,13 @@ html {
  * Remove the margin in all browsers (opinionated).
  */
 
-body {
+html, body {
   margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f1f2f1;
 }
 
 /**
@@ -37,8 +42,20 @@ aside,
 footer,
 header,
 nav,
-section {
+section,
+main {
   display: block;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0 0 15px;
+  padding: 0;
+}
+
+ol {
+  list-style-type: decimal;
 }
 
 /**
@@ -258,6 +275,14 @@ textarea {
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
+}
+
+input, textarea, button, a {
+  transition: 0.2s color ease, 0.2s background ease;
+}
+
+input:focus, textarea:focus, button:focus, a:focus {
+  outline: none;
 }
 
 /**
