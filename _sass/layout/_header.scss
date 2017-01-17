@@ -5,10 +5,10 @@
   padding: 48px 0;
   z-index: 5;
   color: #fff;
-  background-color: #29AD29;
-  background-image: -webkit-gradient(linear,left top,right bottom,from(#29AD29),to(#2D8829));
-  background-image: -webkit-linear-gradient(top left,#29AD29,#2D8829);
-  background-image: linear-gradient(to bottom right,#29AD29,#2D8829);
+  background-color: $header-primary-color;
+  background-image: -webkit-gradient(linear,left top,right bottom,from($header-primary-color),to($header-secondary-color));
+  background-image: -webkit-linear-gradient(top left,$header-primary-color,$header-secondary-color);
+  background-image: linear-gradient(to bottom right,$header-primary-color,$header-secondary-color);
   display: table;
   width: 100%;
   @media screen and (max-width: 725px) {
@@ -57,7 +57,7 @@
 }
 
 .nav {
-  background-color: #213E21;
+  background-color: $nav-background-color;
   text-align: center;
   ul {
     margin: 0 auto;
@@ -84,7 +84,7 @@
       padding: 15px 0;
     }
     &:hover {
-      color: #29AD29;
+      color: $nav-text-color;
     }
   }
 }
