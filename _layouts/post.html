@@ -1,0 +1,58 @@
+---
+layout: default
+---
+<article class="post single">
+  <header class="post__header">
+    <h1 class="alpha post__title" itemprop="name headline">
+      {{ page.title }}
+    </h1>
+    <span class="post__meta">
+    	<time class="post__date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+    		{{ page.date | date: "%b %-d, %Y" }}
+    	</time>
+    </span>
+    <div class="post__meta__divider"></div>
+  </header>
+  <section class="post__content">
+    <div class="post__ad">
+      <div id="carbonads-container">
+        <div class="carbonad">
+          <div id="azcarbon"></div>
+        </div>
+      </div>
+    </div>
+    {{ content }}
+  </section>
+  <div class="share">
+    <div class="addthis_sharing_toolbox"></div>
+  </div>
+</article>
+
+<div class="author">
+  <div class="author__content">
+    <div class="author__pic">
+      <img src="{{ site.baseurl }}/img/justin.jpg" alt="Justin Nel">
+    </div>
+    <div class="author__bio">
+      <p>
+        I'm Justin, I make electronics, write code, and teach what I
+        know to the world through various mediums. In 2016 I created
+        <a href="http://kidspeak.se">Kidspeak</a>.
+      </p>
+      <a href="https://twitter.com/cyberlane" class="twitter-follow-button" data-show-count="true"></a>
+    </div>
+  </div>
+</div>
+
+<div class="disqus">
+  <div id="disqus_thread"></div>
+</div>
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-567a0f80a03a6fbe" async></script>
+<script>
+  var disqus_url = ({%if page.disqus %}'{{ page.disqus }}'{%else %}'http://justinel.com{{ page.url }}'{% endif %}).replace(/\/$/, '');
+  var disqus_title = '{{ page.title }}';
+  var disqus_shortname = 'justinn';
+  var dsq = document.createElement('script');
+  dsq.async = dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  document.getElementsByTagName('head')[0].appendChild(dsq);
+</script>
