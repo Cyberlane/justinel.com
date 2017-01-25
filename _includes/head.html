@@ -24,4 +24,5 @@
   <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <meta name="twitter:image" content="{{ site.url }}/img/og.jpg">
   {% endif %}
+  {% include favicons.html %}
 </head>
