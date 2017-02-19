@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<h1>Projects</h1>
+
+<div class="projects">
+  {% for project in site.projects reversed %}
+  <section class="project-single">
+    <img src="{{ project.img }}" class="project-single__figure" alt="{{ project.title }}" />
+    <div class="project-single__body">
+      <h2 class="project-single__title">
+        <a href="{{ project.github }}" title="{{ project.title }}">{{ project.title }}</a>
+      </h2>
+      <p class="project-single__body">
+        {{ project.content }}
+      </p>
+    </div>
+  </section>
+  {% endfor %}
+</div>

@@ -1,0 +1,15 @@
+.projects {
+  margin: 0 5%;
+}
+
+.project-single {
+  display: flex;
+  align-items: flex-start;
+  &__figure {
+    margin-right: 1em;
+    max-width: 25%;
+  }
+  &__body {
+    flex: 1;
+  }
+}
