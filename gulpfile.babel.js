@@ -2,10 +2,12 @@ import gulp from 'gulp';
 import util from 'gulp-util';
 import concat from 'gulp-concat';
 import header from 'gulp-header';
-import plumber from 'gulp-plumber';
-import babel from 'gulp-babel';
+import source from 'vinyl-source-stream';
+import buffer from 'vinyl-buffer';
+import babel from 'babelify';
 import uglify from 'gulp-uglify';
 import addsrc from 'gulp-add-src';
+import browserify from 'browserify';
 import browserSync from 'browser-sync';
 import child from 'child_process';
 import hygienist from 'hygienist-middleware';
@@ -23,7 +25,7 @@ const banner = (
 );
 
 const paths = {
-  scripts: '_scripts/*.js',
+  scripts: '_scripts/app.js',
   libs: [
   ],
   dist: 'js/',
@@ -33,10 +35,12 @@ browserSync.create();
 
 gulp.task('clean', fn => del([paths.dist, siteRoot], fn));
 
-gulp.task('scripts', ['clean'], () => gulp
-    .src(paths.scripts)
-    .pipe(plumber())
-    .pipe(babel())
+gulp.task('scripts', ['clean'], () => browserify(paths.scripts, { debug: true })
+    .transform(babel)
+    .bundle()
+    .on('error', (err) => { console.error(err); this.emit('end'); })
+    .pipe(source('build.js'))
+    .pipe(buffer())
     .pipe(addsrc.prepend(paths.libs))
     .pipe(concat('bundle.min.js'))
     .pipe(uglify())

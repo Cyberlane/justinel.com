@@ -1,3 +1,6 @@
+import Holder from '../node_modules/holderjs/holder';
+Holder.setTheme();
+
 const searchArea = document.querySelector('.search');
 const searchInput = document.querySelector('.search input');
 const searchResults = document.querySelector('.search ul');
