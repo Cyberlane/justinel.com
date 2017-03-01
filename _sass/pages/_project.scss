@@ -11,5 +11,8 @@
   }
   &__body {
     flex: 1;
+    & > h2 {
+      margin-top: 0;
+    }
   }
 }
