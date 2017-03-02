@@ -27,6 +27,7 @@ const banner = (
 const paths = {
   scripts: '_scripts/app.js',
   libs: [
+    '../node_modules/holderjs/holder.js',
   ],
   dist: 'js/',
 };
