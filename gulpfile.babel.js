@@ -48,7 +48,7 @@ gulp.task('scripts', ['clean'], () => browserify(paths.scripts, { debug: true })
     .pipe(header(banner, {
       parsed,
     }))
-    .pipe(gulp.dest(paths.dist)),
+    .pipe(gulp.dest(paths.dist, siteRoot)),
 );
 
 gulp.task('jekyll', () => {
