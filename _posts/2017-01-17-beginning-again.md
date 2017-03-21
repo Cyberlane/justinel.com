@@ -1,6 +1,6 @@
 ---
 layout: post
-permalink: /test
+permalink: /beginning-again
 title: "Beginning again"
 path: 2017-02-19-beginning-again.md
 ---
